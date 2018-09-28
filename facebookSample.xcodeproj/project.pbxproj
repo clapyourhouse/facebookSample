@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED6E4FA9215B8F3300649D3A /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED6E4FA7215B8F3300649D3A /* FBSDKCoreKit.framework */; };
+		ED6E4FAA215B8F3300649D3A /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED6E4FA8215B8F3300649D3A /* FBSDKLoginKit.framework */; };
 		ED70823D215B7DE700385285 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED70823C215B7DE700385285 /* AppDelegate.swift */; };
 		ED70823F215B7DE700385285 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED70823E215B7DE700385285 /* ViewController.swift */; };
 		ED708242215B7DE700385285 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED708240215B7DE700385285 /* Main.storyboard */; };
@@ -33,7 +35,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		ED708274215B8D1600385285 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		ED6E4FA7215B8F3300649D3A /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../../Documents/swift/FacebookSDKs-iOS-4.35.0/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
+		ED6E4FA8215B8F3300649D3A /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../../Documents/swift/FacebookSDKs-iOS-4.35.0/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		ED708239215B7DE700385285 /* facebookSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = facebookSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED70823C215B7DE700385285 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED70823E215B7DE700385285 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +64,7 @@
 		ED708258215B7DE800385285 /* facebookSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = facebookSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED70825C215B7DE800385285 /* facebookSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = facebookSampleUITests.swift; sourceTree = "<group>"; };
 		ED70825E215B7DE800385285 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED70826F215B8C2400385285 /* facebookSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = facebookSample.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED6E4FA9215B8F3300649D3A /* FBSDKCoreKit.framework in Frameworks */,
+				ED6E4FAA215B8F3300649D3A /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +101,7 @@
 				ED708250215B7DE800385285 /* facebookSampleTests */,
 				ED70825B215B7DE800385285 /* facebookSampleUITests */,
 				ED70823A215B7DE700385285 /* Products */,
+				ED70826A215B7F2E00385285 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +118,7 @@
 		ED70823B215B7DE700385285 /* facebookSample */ = {
 			isa = PBXGroup;
 			children = (
+				ED70826F215B8C2400385285 /* facebookSample.entitlements */,
 				ED70823C215B7DE700385285 /* AppDelegate.swift */,
 				ED70823E215B7DE700385285 /* ViewController.swift */,
 				ED708240215B7DE700385285 /* Main.storyboard */,
@@ -125,6 +147,15 @@
 			path = facebookSampleUITests;
 			sourceTree = "<group>";
 		};
+		ED70826A215B7F2E00385285 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED6E4FA7215B8F3300649D3A /* FBSDKCoreKit.framework */,
+				ED6E4FA8215B8F3300649D3A /* FBSDKLoginKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +166,7 @@
 				ED708235215B7DE700385285 /* Sources */,
 				ED708236215B7DE700385285 /* Frameworks */,
 				ED708237215B7DE700385285 /* Resources */,
+				ED708274215B8D1600385285 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -193,6 +225,11 @@
 				TargetAttributes = {
 					ED708238215B7DE700385285 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					ED70824C215B7DE800385285 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -430,8 +467,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = facebookSample/facebookSample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F2BK5B9D8F;
+				FRAMEWORK_SEARCH_PATHS = "/Users/shogo.kitamura/Documents/swift/FacebookSDKs-iOS-4.35.0";
 				INFOPLIST_FILE = facebookSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -447,8 +488,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = facebookSample/facebookSample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F2BK5B9D8F;
+				FRAMEWORK_SEARCH_PATHS = "/Users/shogo.kitamura/Documents/swift/FacebookSDKs-iOS-4.35.0";
 				INFOPLIST_FILE = facebookSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

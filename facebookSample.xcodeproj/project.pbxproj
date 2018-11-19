@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED3CFF1A21A2A4BF009F0873 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3CFF1921A2A4BF009F0873 /* MainViewController.swift */; };
 		ED6E4FA9215B8F3300649D3A /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED6E4FA7215B8F3300649D3A /* FBSDKCoreKit.framework */; };
 		ED6E4FAA215B8F3300649D3A /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED6E4FA8215B8F3300649D3A /* FBSDKLoginKit.framework */; };
 		ED70823D215B7DE700385285 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED70823C215B7DE700385285 /* AppDelegate.swift */; };
-		ED70823F215B7DE700385285 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED70823E215B7DE700385285 /* ViewController.swift */; };
+		ED70823F215B7DE700385285 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED70823E215B7DE700385285 /* WelcomeViewController.swift */; };
 		ED708242215B7DE700385285 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED708240215B7DE700385285 /* Main.storyboard */; };
 		ED708244215B7DE800385285 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED708243215B7DE800385285 /* Assets.xcassets */; };
 		ED708247215B7DE800385285 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED708245215B7DE800385285 /* LaunchScreen.storyboard */; };
@@ -49,11 +50,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		ED3CFF1921A2A4BF009F0873 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		ED6E4FA7215B8F3300649D3A /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../../Documents/swift/FacebookSDKs-iOS-4.35.0/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		ED6E4FA8215B8F3300649D3A /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../../Documents/swift/FacebookSDKs-iOS-4.35.0/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		ED708239215B7DE700385285 /* facebookSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = facebookSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED70823C215B7DE700385285 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ED70823E215B7DE700385285 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ED70823E215B7DE700385285 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		ED708241215B7DE700385285 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ED708243215B7DE800385285 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED708246215B7DE800385285 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -120,7 +122,8 @@
 			children = (
 				ED70826F215B8C2400385285 /* facebookSample.entitlements */,
 				ED70823C215B7DE700385285 /* AppDelegate.swift */,
-				ED70823E215B7DE700385285 /* ViewController.swift */,
+				ED70823E215B7DE700385285 /* WelcomeViewController.swift */,
+				ED3CFF1921A2A4BF009F0873 /* MainViewController.swift */,
 				ED708240215B7DE700385285 /* Main.storyboard */,
 				ED708243215B7DE800385285 /* Assets.xcassets */,
 				ED708245215B7DE800385285 /* LaunchScreen.storyboard */,
@@ -293,7 +296,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED70823F215B7DE700385285 /* ViewController.swift in Sources */,
+				ED3CFF1A21A2A4BF009F0873 /* MainViewController.swift in Sources */,
+				ED70823F215B7DE700385285 /* WelcomeViewController.swift in Sources */,
 				ED70823D215B7DE700385285 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

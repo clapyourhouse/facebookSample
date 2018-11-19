@@ -10,46 +10,41 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 
-class ViewController: UIViewController,FBSDKLoginButtonDelegate {
+class WelcomeViewController: UIViewController,FBSDKLoginButtonDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //FB login button set
         let fbLoginBtn = FBSDKLoginButton()
         fbLoginBtn.readPermissions = ["public_profile", "email"]
         fbLoginBtn.center = self.view.center
         fbLoginBtn.delegate = self
         self.view.addSubview(fbLoginBtn)
-        // Do any additional setup after loading the view, typically from a nib.
     }
     override func viewDidAppear(_ animated: Bool) {
         //login done checking
         if let _ = FBSDKAccessToken.current() {
-            //modal
-            print("login success")
-//            performSegue(withIdentifier: "modalTop", sender: self)
+            //ログイン済みだとView表示時
+            print("User Already Logged In")
+            self.performSegue(withIdentifier: "showMain", sender: nil)
         } else {
-            //FB login button set
-//            let fbLoginBtn = FBSDKLoginButton()
-//            fbLoginBtn.readPermissions = ["public_profile", "email"]
-//            fbLoginBtn.center = self.view.center
-//            fbLoginBtn.delegate = self
-//            self.view.addSubview(fbLoginBtn)
         }
     }
-    //login callback　!ってなんだ？
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         //error checking
         if error == nil {
             if result.isCancelled {
-                print("キャンセル")
+                print("キャンセルしたで")
             } else {
-                print("キャンセル")
+                print("ログインしたで")
+                if result.grantedPermissions.contains("email")
+                {
+                    self.performSegue(withIdentifier: "showMain", sender: self)
+                }
             }
         }
     }
-    //logout callback
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        //ログアウト時処理
         print("logout done")
     }
     override func didReceiveMemoryWarning() {

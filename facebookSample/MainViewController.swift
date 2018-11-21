@@ -37,9 +37,24 @@ class MainViewController: UIViewController {
             else
             {
                 //プロフィール写真を格納する
-                self.userProfile = result as! NSDictionary
+                self.userProfile = (result as! NSDictionary)
                 print(self.userProfile)
-                //プロフィール写真を取得して丸くする
+                let picUrl = self.userProfile.value(forKeyPath: "picture.data.url")
+//                let url = URL(string: user.imageURL)
+                do {
+                    let url = URL(string: picUrl as! String )
+                    let data = try Data(contentsOf: url! as! URL)
+                    let image = UIImage(data: data)
+                    self.userImage.clipsToBounds = true
+                    self.userImage.layer.cornerRadius = 60
+                    self.userImage.image = image
+                    
+                }catch let err {
+                    print("Error : \(err.localizedDescription)")
+                }
+                
+//                var catPictureData = NSData(contentsOf: url as! URL) // nil
+//                var catPicture = UIImage(data: catPictureData as! Data)                //プロフィール写真を取得して丸くする
                 // TODO : swift4におけるpicture.data.urlの連想配列
 //                let profileImageURL : String = self.userProfile.object(forKey: "picture") as! String
 //                var profileImage = UIImage(data: NSData(contentsOf: NSURL(string: profileImageURL)! as URL)! as Data)
